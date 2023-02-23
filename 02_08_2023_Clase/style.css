@@ -1,0 +1,36 @@
+:root{
+    --white: #fff;
+    --blue: #81f5ff;
+}
+
+body{
+    margin: 0;
+    background-color: var(--blue);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contenedorPrincipal{
+    margin: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.contenedorUno{
+    margin: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    border: 5px solid gray;
+}
+
+.contenedorDos{
+    margin: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+    border: 5px solid gray;
+}
