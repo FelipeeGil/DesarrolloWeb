@@ -66,7 +66,7 @@ body {
     overflow-x: hidden;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
@@ -134,6 +134,7 @@ button,
     font-size: 0.875rem;
     transition: opacity 300ms ease-in-out;
     overflow: hidden;
+    margin-top: 30px;
 }
 
 button::before,
@@ -190,4 +191,48 @@ button:hover::before,
 .footer .attribution {
     margin-top: 32px;
     font-size: 14px;
+}
+
+.flex-outer,
+.flex-inner{
+    list-style-type: none;
+    padding: 0;
+}
+
+.flex-outer{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-inner{
+    padding: 0;
+    justify-content: space-between;
+}
+
+.flex-outer > li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-inner li p{
+    padding: 8px;
+    font-weight: 300;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+    flex: 1 0 120px;
+    max-width: 220;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+    flex: 1 0 220px;
 }
