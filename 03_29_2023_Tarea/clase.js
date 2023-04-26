@@ -1,3 +1,41 @@
+/**
+     * Crear mínimo dos módulos.
+     *
+     * El primer modulo debe tener:
+     * Una clase que hereda de otra
+     * Un objeto que dentro de sus propiedades tenga otro objeto
+     *
+     * El segundo módulo debe tener:
+     *
+     * importación de la clase y el objeto
+     * Funcion tipo flecha que realice el uso de la clase y objeto importados
+     *
+     * Oros adicionales:
+     *
+     * Tercer módulo que contenga:
+     * una función tipo flecha, que manipule arreglos con los métodos de arreglos
+     * Debe tener como parámetros de entrada el arreglo y una callback function
+     * debe poderse exportar.
+ */
+
+const Referi = {
+    nombre: "Kenny Bayless",
+    edad: 72,
+    fechaDeNacimiento: "May 4, 1950",
+}
+
+export const Pelea = {
+    nombreDeporte: "Boxeo", 
+    numeroJugadores: 2, 
+    equipamiento: ["Guantes", "Vendas para manos", "Pantalón de boxeo", "Zapatillas de boxeo"], 
+    tipoDeporte: "Contacto", 
+    luchador1: "Felipe Gil", 
+    luchador2: "Myke Tyson", 
+    referi: Referi,
+    cantidadRounds: 5, 
+    tiempoRound: 3,
+}
+
 export class Deporte {
     constructor(nombreDeporte, numeroJugadores, equipamiento, tipoDeporte){
         this.nombreDeporte = nombreDeporte
@@ -42,5 +80,3 @@ export class Boxeo extends Deporte {
         return `El nombre del referi es ${this.referi}.`
     }
 }
-
-export const Pelea = new Boxeo("Boxeo", 2, ["Guantes", "Vendas para manos", "Pantalón de boxeo", "Zapatillas de boxeo"], "Contacto", "Felipe Gil", "Myke Tyson", "Steve Willis", 5, 3)
