@@ -5,6 +5,7 @@ import { Inicio } from "./modulos/Inicio";
 import { Tienda } from "./modulos/Tienda";
 import { Compra } from "./modulos/Compra";
 import { Contactanos } from "./modulos/Contactanos";
+import { SobreNosotros } from "./modulos/sobreNosotros";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/tienda" element={<Tienda />} />
           <Route path="/compra" element={<Compra />} />
+          <Route path="/nosotros" element={<SobreNosotros />} />
           <Route path="/contactanos" element={<Contactanos />} />
         </Routes>
         <Footer />
