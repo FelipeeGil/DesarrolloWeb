@@ -1,0 +1,238 @@
+.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1555px;
+    margin: 0 auto;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+.header__toggle > span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: #2d314d;
+    transition: all 300ms ease-in-out;
+    transform-origin: 3px 1px;
+    margin-bottom: 5px;
+}
+
+.header__links a {
+    position: relative;
+    font-size: 16px;
+    color: black;
+    transition: color 300ms ease-in-out;
+}
+
+.header__links a:not(:last-child) {
+    margin-right: 14px;
+}
+
+.header__links a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 5px;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    background: linear-gradient(to right, rgb(38, 131, 161), rgb(43, 41, 41));
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.header__links a:hover::before {
+    opacity: 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Public Sans", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #44454d;
+    line-height: 1.3;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+.info {
+    padding-left: 180px;
+    width: 80%;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 120px;
+    text-align: center;
+}
+
+.parrafo {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 60px;
+    text-align: justify;
+}
+
+img { 
+    width: 380px;
+    height: 250px;
+}
+
+.cards{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.btnc {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.textc { 
+    padding-left: 10px;
+}
+
+button,
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 0.875rem 2.1875rem;
+    background-image: linear-gradient(to right, rgb(38, 131, 161), rgb(43, 41, 41));
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 400;
+    font-size: 0.875rem;
+    transition: opacity 300ms ease-in-out;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+button::before,
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+button:hover::before,
+.button:hover::before {
+    opacity: 1;
+}
+
+.footer {
+    margin-top: 100px;
+    background: linear-gradient(to right, rgb(38, 131, 161), rgb(43, 41, 41));
+    color: white;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer__social a:hover svg path {
+    fill: #3157d3;
+}
+
+.footer__social a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 2.25;
+    transition: color 150ms ease-in-out;
+}
+
+.footer__links a:hover {
+    color: #3157d3;
+}
+
+.footer .attribution {
+    margin-top: 32px;
+    font-size: 14px;
+}
+
+.flex-outer,
+.flex-inner{
+    list-style-type: none;
+    padding: 0;
+}
+
+.flex-outer{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-inner{
+    padding: 0;
+    justify-content: space-between;
+}
+
+.flex-outer > li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-inner li p{
+    padding: 8px;
+    font-weight: 300;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+    flex: 1 0 120px;
+    max-width: 220;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+    flex: 1 0 220px;
+}
